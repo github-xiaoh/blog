@@ -29,6 +29,9 @@ urlpatterns = [
       
       # 代码雨网页
       url(r'^code_wall/',views.codeWall,name="code_wall"),
+    
+      # 代码雨网页
+      url(r'^code_wall2/',views.codeWall2,name="code_wall2"),
 
 
 ]

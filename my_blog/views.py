@@ -19,6 +19,10 @@ def codeWall(request):
     """代码雨"""
     return render(request,'my_blog/code_wall.html')
 
+def codeWall2(request):
+    """代码雨"""
+    return render(request,'my_blog/code_wall2.html')
+
 def file_input(request):
     if request.method == 'GET':
         a = {'a':'开始上传'}
