@@ -14,7 +14,7 @@
     <title>学习笔记-收藏夹</title>
     {% bootstrap_css %}
     {% bootstrap_javascript %}
-  
+
   <style>
     body{
         padding-top: 17px;
@@ -42,6 +42,11 @@
           <ul class="nav navbar-nav">
             <li>
               <a href="{% url 'my_blog:file_input' %}">文件上传⏫</a>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav">
+            <li>
+              <a href="{% url 'my_blog:code_wall' %}">代码雨🌧️</a>
             </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">

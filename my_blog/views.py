@@ -15,19 +15,21 @@ def index(request):
     """学习笔记打主页"""
     return render(request,'my_blog/index.html')
 
-
+def codeWall(request):
+    """代码雨"""
+    return render(request,'my_blog/code_wall.html')
 
 def file_input(request):
     if request.method == 'GET':
         a = {'a':'开始上传'}
         return render(request, "my_blog/file_input.html",a)
     else:
-        
+
         file_name = request.FILES.get('file_inputname')
         with open('my_blog/file/'+str(file_name.name),'wb') as f:
             for line in file_name:
                 f.write(line)
-            
+
         if file_name:
             a = {'a': str(file_name)+"上传成功"}
         else:
@@ -130,7 +132,7 @@ def edit_entry(request,entry_id):
         if form.is_valid():
             form.save()
             return HttpResponseRedirect(reverse('my_blog:topic',args=[topic.id]))
-    
+
     context = {'entry':entry,'topic':topic,'form':form}
     return render(request,'my_blog/edit_entry.html',context)
 

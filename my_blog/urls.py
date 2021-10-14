@@ -26,6 +26,9 @@ urlpatterns = [
       url(r'^edit_entry/(?P<entry_id>\d+)/$', views.edit_entry,name='edit_entry'),
 
       url(r'^file_input/',views.file_input,name="file_input"),
+      
+      # 代码雨网页
+      url(r'^code_wall/',views.codeWall,name="code_wall"),
 
 
 ]
